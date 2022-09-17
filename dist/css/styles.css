@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+:root {
+    /* Colors */
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+
+    /* Neutral Colors */
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: var(--cream);
+
+    display: grid;
+    place-items: center;
+}
+
+h1 {
+    font-size: 2.3rem;
+    margin: 0;
+}
+
+.card {
+    width: 340px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--white);
+    
+}
+
+@media (min-width: 768px) {
+    .card {
+        width: auto;
+        max-height: 450px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(200px, 300px));
+    }
+
+}
+
+picture {
+    overflow: hidden;
+}
+
+.card__img {
+    width: 100%;
+    height: 100%;
+}
+
+.card__details {
+    padding: 1rem 1.7rem;
+}
+
+@media (min-width: 768px) {
+    .card__details {
+        padding: 2.5rem;
+    }
+
+}
+
+.card__category {
+    color: var(--dark-grayish-blue);
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font: .8rem Montserrat, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card__title {
+    font-family: Fraunces, 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+    font-weight: 700;
+    color: var(--very-dark-blue);
+}
+
+.card__body {
+    font-family: Montserrat, 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+    color: var(--dark-grayish-blue);
+    line-height: 1.6;
+
+}
+
+.card__price--discounted {
+    font:  2rem Fraunces, sans-serif;
+    color: var(--dark-cyan);
+    display: inline;
+    margin-top: 0;
+    vertical-align: middle;
+}
+
+.card__price--original {
+    font-family: Montserrat, sans-serif;
+    vertical-align: middle;
+    margin-inline: 1rem;
+    color: var(--dark-grayish-blue);
+    text-decoration: line-through;
+}
+
+.btn--add {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background: var(--dark-cyan);
+    color: var(--white);
+    border: none;
+    border-radius: .5rem;
+    margin-block: 1rem;
+    font-family: Montserrat, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 700;
+}
+
+.btn--logo {
+    margin-right: .5rem;
+    vertical-align: middle;
+    margin-block: inherit;
+}
